@@ -11,6 +11,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import { useNavigate } from 'react-router';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -24,44 +25,69 @@ const Navigation = () => {
 
   return (
     <Box sx={{ width: '100%', height: '60px' }}>
-      <AppBar
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-      >
+      <AppBar>
         {isDesktop && (
-          <Toolbar>
-            <Button
-              sx={{
-                textTransform: 'none',
-                color: 'text.primary',
-                marginRight: '8px',
-              }}
-              onClick={() => navigate('/')}
+          <Toolbar sx={{ width: '100%' }}>
+            <div
+              style={{ display: 'flex', alignItems: 'center', width: '100%' }}
             >
-              Spende Registrieren
-            </Button>
-            <Divider orientation="vertical" variant="middle" flexItem />
-            <Button
-              sx={{
-                textTransform: 'none',
-                color: 'text.primary',
-                marginRight: '8px',
-                marginLeft: '8px',
+              <img
+                src={`${window.location}/logo192.png`}
+                style={{
+                  width: '35px',
+                  height: '35px',
+                }}
+              />
+              <Typography
+                variant={'h6'}
+                sx={{ width: '300px', marginLeft: '16px' }}
+              >
+                Kleiderspende Registrieren
+              </Typography>
+            </div>
+            <div
+              style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
-              onClick={() => navigate('/impressum')}
             >
-              Impressum
-            </Button>
-            <Divider orientation="vertical" variant="middle" flexItem />
-            <Button
-              sx={{
-                textTransform: 'none',
-                color: 'text.primary',
-                marginLeft: '8px',
-              }}
-              onClick={() => navigate('/datenschutz')}
-            >
-              Datenschutz
-            </Button>
+              <Button
+                sx={{
+                  textTransform: 'none',
+                  color: 'text.primary',
+                  marginRight: '8px',
+                }}
+                onClick={() => navigate('/')}
+              >
+                Spende Registrieren
+              </Button>
+              <Divider orientation="vertical" variant="middle" flexItem />
+              <Button
+                sx={{
+                  textTransform: 'none',
+                  color: 'text.primary',
+                  marginRight: '8px',
+                  marginLeft: '8px',
+                }}
+                onClick={() => navigate('/impressum')}
+              >
+                Impressum
+              </Button>
+              <Divider orientation="vertical" variant="middle" flexItem />
+              <Button
+                sx={{
+                  textTransform: 'none',
+                  color: 'text.primary',
+                  marginLeft: '8px',
+                }}
+                onClick={() => navigate('/datenschutz')}
+              >
+                Datenschutz
+              </Button>
+            </div>
+            <div style={{ width: '100%' }} />
           </Toolbar>
         )}
         {!isDesktop && (
@@ -70,11 +96,27 @@ const Navigation = () => {
               size="large"
               edge="start"
               color="inherit"
-              sx={{ mr: 2, marginLeft: '16px' }}
+              sx={{ mr: 2, marginLeft: '8px', marginRight: '0px' }}
               onClick={() => setOpenDrawer(!openDrawer)}
             >
               <MenuIcon />
             </IconButton>
+            <div
+              style={{ display: 'flex', alignItems: 'center', width: '100%' }}
+            >
+              <Typography sx={{ marginRight: 'auto', marginLeft: 'auto' }}>
+                Kleiderspende Registrieren
+              </Typography>
+              <img
+                src={`${window.location}/logo192.png`}
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  marginRight: '48px',
+                  marginLeft: '8px',
+                }}
+              />
+            </div>
           </Toolbar>
         )}
       </AppBar>
