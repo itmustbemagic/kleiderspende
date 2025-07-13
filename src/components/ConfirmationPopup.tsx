@@ -16,6 +16,7 @@ interface IConfirmationPopup {
 }
 
 const ConfirmationPopup = ({ open, onClose, formData }: IConfirmationPopup) => {
+  const currentDate = new Date();
   return (
     <Backdrop sx={{ zIndex: 9999 }} open={open}>
       <Paper
@@ -66,6 +67,15 @@ const ConfirmationPopup = ({ open, onClose, formData }: IConfirmationPopup) => {
           sx={{ marginLeft: '8px', marginBottom: '8px' }}
         >
           {formData.crisisArea}
+        </Typography>
+        <Typography variant={'body1'} sx={{ marginTop: '16px' }}>
+          Spende registriert am:
+        </Typography>
+        <Typography
+          variant={'body1'}
+          sx={{ marginLeft: '8px', marginBottom: '8px' }}
+        >
+          {`${currentDate.toLocaleDateString('de-DE', {})} um ${currentDate.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr`}
         </Typography>
         <Button sx={{ marginTop: '16px' }} onClick={onClose}>
           Bestätigen
