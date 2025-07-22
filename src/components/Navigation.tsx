@@ -32,7 +32,7 @@ const Navigation = () => {
               style={{ display: 'flex', alignItems: 'center', width: '100%' }}
             >
               <img
-                src={`${window.location}/logo192.png`}
+                src={`${window.location.origin}/logo192.png`}
                 style={{
                   width: '35px',
                   height: '35px',
@@ -108,7 +108,7 @@ const Navigation = () => {
                 Kleiderspende Registrieren
               </Typography>
               <img
-                src={`${window.location}/logo192.png`}
+                src={`${window.location.origin}/logo192.png`}
                 style={{
                   width: '30px',
                   height: '30px',
