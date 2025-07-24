@@ -129,35 +129,41 @@ const Donation = () => {
               </Card>
             )}
           </FormControl>
-          <Select
-            value={clothing}
-            onChange={(event) => setClothing(event.target.value)}
-          >
-            <MenuItem value={'T-Shirt'}>T-Shirt</MenuItem>
-            <MenuItem value={'Jeans'}>Jeans</MenuItem>
-            <MenuItem value={'Schorts'}>Schorts</MenuItem>
-            <MenuItem value={'Schuhe'}>Schuhe</MenuItem>
-            <MenuItem value={'Pullover'}>Pullover</MenuItem>
-            <MenuItem value={'Jacke'}>Jacke</MenuItem>
-          </Select>
-          <Select
-            value={crisisArea}
-            onChange={(event) => setCrisisArea(event.target.value)}
-          >
-            {/*https://www.rescue.org/de/artikel/top-10-krisen-welt-nicht-ignorieren-2024*/}
-            <MenuItem value={'Demokratische Republik Kongo'}>
-              Demokratische Republik Kongo
-            </MenuItem>
-            <MenuItem value={'Äthiopien'}>Äthiopien</MenuItem>
-            <MenuItem value={'Niger'}>Niger</MenuItem>
-            <MenuItem value={'Somalia'}>Somalia</MenuItem>
-            <MenuItem value={'Mali'}>Mali</MenuItem>
-            <MenuItem value={'Myanmar'}>Myanmar</MenuItem>
-            <MenuItem value={'Burkina Faso'}>Burkina Faso</MenuItem>
-            <MenuItem value={'Südsudan'}>Südsudan</MenuItem>
-            <MenuItem value={'Gaza'}>Gaza</MenuItem>
-            <MenuItem value={'Sudan'}>Sudan</MenuItem>
-          </Select>
+          <FormControl>
+            <FormHelperText>Kleidung</FormHelperText>
+            <Select
+              value={clothing}
+              onChange={(event) => setClothing(event.target.value)}
+            >
+              <MenuItem value={'T-Shirt'}>T-Shirt</MenuItem>
+              <MenuItem value={'Jeans'}>Jeans</MenuItem>
+              <MenuItem value={'Shorts'}>Schorts</MenuItem>
+              <MenuItem value={'Schuhe'}>Schuhe</MenuItem>
+              <MenuItem value={'Pullover'}>Pullover</MenuItem>
+              <MenuItem value={'Jacke'}>Jacke</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl>
+            <FormHelperText>Krisengebiet</FormHelperText>
+            <Select
+              value={crisisArea}
+              onChange={(event) => setCrisisArea(event.target.value)}
+            >
+              {/*https://www.rescue.org/de/artikel/top-10-krisen-welt-nicht-ignorieren-2024*/}
+              <MenuItem value={'Demokratische Republik Kongo'}>
+                Demokratische Republik Kongo
+              </MenuItem>
+              <MenuItem value={'Äthiopien'}>Äthiopien</MenuItem>
+              <MenuItem value={'Niger'}>Niger</MenuItem>
+              <MenuItem value={'Somalia'}>Somalia</MenuItem>
+              <MenuItem value={'Mali'}>Mali</MenuItem>
+              <MenuItem value={'Myanmar'}>Myanmar</MenuItem>
+              <MenuItem value={'Burkina Faso'}>Burkina Faso</MenuItem>
+              <MenuItem value={'Südsudan'}>Südsudan</MenuItem>
+              <MenuItem value={'Gaza'}>Gaza</MenuItem>
+              <MenuItem value={'Sudan'}>Sudan</MenuItem>
+            </Select>
+          </FormControl>
           <Button sx={{ marginBottom: '16px' }} type="submit">
             Spende registrieren
           </Button>
