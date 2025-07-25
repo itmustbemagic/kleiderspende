@@ -137,7 +137,7 @@ const Donation = () => {
             >
               <MenuItem value={'T-Shirt'}>T-Shirt</MenuItem>
               <MenuItem value={'Jeans'}>Jeans</MenuItem>
-              <MenuItem value={'Shorts'}>Schorts</MenuItem>
+              <MenuItem value={'Shorts'}>Shorts</MenuItem>
               <MenuItem value={'Schuhe'}>Schuhe</MenuItem>
               <MenuItem value={'Pullover'}>Pullover</MenuItem>
               <MenuItem value={'Jacke'}>Jacke</MenuItem>
