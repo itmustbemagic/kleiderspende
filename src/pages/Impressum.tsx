@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 const Impressum = () => {
   return (
     <Content>
-      <Box>
+      <Box sx={{ marginLeft: '32px', marginRight: '32px' }}>
         <h1>Impressum</h1>
 
         <p>
